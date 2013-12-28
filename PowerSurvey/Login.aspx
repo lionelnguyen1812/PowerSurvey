@@ -14,8 +14,9 @@
 		<div class="header">
 			<div class="header_container page_div">
 				<div class="logo_outer">
-					<span class="logo_inner">SuSu</span>
+					<div class="logo_inner">Survey</div>
 				</div>
+				<div class="button" id="btnSignin">Signin</div>
 			</div>
 		</div>
 
@@ -30,7 +31,7 @@
 
 
 
-		<div class="footer">
+		<div class="footer page_div">
 			
 		</div>
 	</div>
