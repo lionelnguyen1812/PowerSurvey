@@ -1,0 +1,46 @@
+
+<SuperSurvey>
+
+	<!-- Dữ liệu các câu hỏi -->
+	<Questions>
+		<Question ID="identity: string" difficult="điểm: int">
+			<Content>
+				<!-- Nội dung câu hỏi -->
+			</Content>
+
+			<Answer isRight="true">
+				<!-- nội dung câu trả lời -->
+				<!-- isRight="true" nếu đây là câu trả lời đúng -->
+			</Answer>
+
+			<Answer>
+				<!-- có nhiều câu trả lời -->
+			</Answer>
+
+			<Answer isRight="true">
+				<!-- có nhiều câu trả lời -->
+			</Answer>
+
+			<Answer>
+				<!-- có nhiều câu trả lời -->
+			</Answer>
+		</Question>
+
+		<!-- ............ -->
+		<Question></Question>
+		<Question></Question>
+
+	</Questions>
+
+	<!-- Dữ liệu các survey -->
+	<Surveys>
+		<survey ID="identity: string" marks="tổng điểm: int">
+			<name></name>
+		</survey>
+		
+		<!-- có nhiều survey -->
+		<survey></survey>
+		<survey></survey>
+	</Surveys>
+
+</SuperSurvey>
