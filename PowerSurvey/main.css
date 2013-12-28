@@ -1,0 +1,52 @@
+﻿body {
+	font-family: Helvetica, arial, freesans, clean, sans-serif;
+	font-size: 12px;
+	background-color: #FFF;
+}
+
+.main{
+	position: relative;
+	margin: auto;
+}
+
+.page_div{
+	width: 980px;
+}
+
+.header{
+	position: absolute;
+	margin: auto;
+	float: left;
+
+	width: 100%;
+	min-width: 1000px;
+	height: 40px;
+
+	background-color: #F5F5F5;
+
+	border-bottom: 2px dotted #E5E5E5;
+}
+
+.header_container{ 	
+	margin: auto;
+	height: 100%;
+	border-left: 2px dotted #F50;
+	border-right: 2px dotted #F50;
+}
+
+.logo_outer{
+	margin-top: 2px;
+	width: 80px;
+	height: 34px;
+	border: 2px dotted #000
+}
+
+.logo_inner{
+	font-size: 2.5em;
+	height: 2.5em;
+	font-weight: bold;
+}
+
+.footer{
+
+}
