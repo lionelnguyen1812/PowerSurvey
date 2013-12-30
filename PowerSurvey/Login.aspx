@@ -10,7 +10,18 @@
 <body>
     <form id="frmLogin" runat="server">
 
+<<<<<<< HEAD
         <div class="main">
+=======
+		<div class="header">
+			<div class="header_container page_div">
+				<div class="logo_outer">
+					<div class="logo_inner">Survey</div>
+				</div>
+				<div class="button" id="btnSignin">Signin</div>
+			</div>
+		</div>
+>>>>>>> 30dff75f970d98e9442825dba14e3e73d34bf88c
 
 
             <div class="header">
@@ -29,6 +40,13 @@
             </div>
 
 
+<<<<<<< HEAD
+=======
+		<div class="footer page_div">
+			
+		</div>
+	</div>
+>>>>>>> 30dff75f970d98e9442825dba14e3e73d34bf88c
 
             <div class="content_ page_div">
                 <div class="content_loginpanel">
