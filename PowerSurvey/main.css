@@ -1,7 +1,6 @@
 ﻿body {
 	font-family: Helvetica, arial, freesans, clean, sans-serif;
 	font-size: 12px;
-	background-color: #FFF;
 }
 
 .main{
@@ -14,9 +13,6 @@
 }
 
 .header{
-	position: absolute;
-	margin: auto;
-	float: left;
 
 	width: 100%;
 	min-width: 1000px;
@@ -24,27 +20,76 @@
 
 	background-color: #F5F5F5;
 
-	border-bottom: 2px dotted #E5E5E5;
+	border-bottom: 1px solid #E5E5E5;
+    top: 15px;
+    left: 0px;
 }
 
 .header_container{ 	
 	margin: auto;
 	height: 100%;
-	border-left: 2px dotted #F50;
-	border-right: 2px dotted #F50;
+	/*border-left: 1px solid #F50;*/
+	/*border-right: 1px solid #F50;*/
 }
 
 .logo_outer{
+    float: left;
 	margin-top: 2px;
 	width: 80px;
 	height: 34px;
-	border: 2px dotted #000
 }
 
 .logo_inner{
 	font-size: 2.5em;
 	height: 2.5em;
 	font-weight: bold;
+}
+.button_header{
+    float:right;
+    margin-top: 6px;
+	width: 80px;
+	height: 34px;
+    
+}
+
+.button_button{
+    border-radius:6px;
+}
+
+
+.content_{
+    /*border:1px solid #E5E5E5;*/
+    width: 980px;
+	min-height: 600px;
+    margin:auto;
+}
+
+.content_loginpanel{
+    margin-top:10%;
+    margin-left:30%;
+    width:400px;
+    height:350px;
+    
+}
+
+.content_loginpanel1{
+    border: 1px solid #E5E5E5;
+    width:430px;
+    height:40px;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+    margin:auto;
+    background:#788E9E;
+}
+
+.content_loginpanel2{
+    border: 1px solid #E5E5E5;
+    width:430px;
+    height:250px;
+    border-bottom-right-radius:3px;
+    border-bottom-left-radius:3px;
+    margin:auto;
+    
 }
 
 .footer{

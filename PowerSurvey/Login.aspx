@@ -8,33 +8,49 @@
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<div class="main">
-		
+    <form id="frmLogin" runat="server">
 
-		<div class="header">
-			<div class="header_container page_div">
-				<div class="logo_outer">
-					<span class="logo_inner">SuSu</span>
-				</div>
-			</div>
-		</div>
-
-		<div class="content page_div">
-			<form id="frmLogin" runat="server">
-		    <div>
-		    
-		    </div>
-		    </form>
-		</div>
+        <div class="main">
 
 
+            <div class="header">
+                <div class="header_container page_div">
+                    <div class="logo_outer">
+                        <span class="logo_inner">Survey</span>
+                    </div>
+                    <div class="button_header">
+                        <asp:Button ID="btnSignin" runat="server" Text="Sign in" Width="70" Height="30" />
+
+                    </div>
+                    <div class="button_header">
+                        <asp:Button ID="btnSignup" runat="server" Text="Sign up" Width="70" Height="30" BackColor="YellowGreen" BorderColor="YellowGreen" />
+                    </div>
+                </div>
+            </div>
 
 
-		<div class="footer">
-			
-		</div>
-	</div>
 
-    
+            <div class="content_ page_div">
+                <div class="content_loginpanel">
+                    <div class="content_loginpanel1">
+                    </div>
+
+                    <div class="content_loginpanel2">
+
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+
+            <div class="footer">
+            </div>
+        </div>
+
+
+
+    </form>
 </body>
 </html>
