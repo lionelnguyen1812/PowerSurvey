@@ -10,42 +10,35 @@
 <body>
     <form id="frmLogin" runat="server">
 
+
         <div class="main">
 
 
-            <div class="header" title="">
-                <div class="header_container page_div">
+            <div class="topbar" title="">
+                <div class="header-container">
 
-                    <div class="logo_outer">
-                        <span class="logo_inner">Survey</span>
-                        <span class="header_link">
-                            
-                            <asp:LinkButton ID="LinkButton5" runat="server" Font-Underline="False" ForeColor="Black">Explore</asp:LinkButton>
-                            &nbsp;&nbsp;&nbsp;
-                            <asp:LinkButton ID="LinkButton6" runat="server" Font-Underline="False" ForeColor="Black">Features</asp:LinkButton>
-                            &nbsp;&nbsp;&nbsp;
-                            <asp:LinkButton ID="LinkButton7" runat="server" Font-Underline="False" ForeColor="Black">Enterprise</asp:LinkButton>
-                            &nbsp;&nbsp;&nbsp;
-                            <asp:LinkButton ID="LinkButton8" runat="server" Font-Underline="False" ForeColor="Black">Blog</asp:LinkButton>
-                        </span>
+                    <div class="header-logo">
+                        <span class="header-logo-title">Survey</span>
                     </div>
 
-
-
-                    <div class="button_header">
-                        <asp:ImageButton ID="btnSignin" runat="server" Text="Sign in" Width="70" Height="30" ImageUrl="~/Capture1.PNG" />
-
+                    <div class="header-command-bar">
+                        <asp:LinkButton ID="LinkButton5" runat="server" CssClass="header-topnav-element">Explore</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton6" runat="server" CssClass="header-topnav-element">Features</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton7" runat="server" CssClass="header-topnav-element">Enterprise</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButton8" runat="server" CssClass="header-topnav-element">Blog</asp:LinkButton>
                     </div>
 
-                    <div class="button_header">
-                        <asp:ImageButton ID="btnSignup" runat="server" Text="Sign Up" Width="70" Height="30" ImageUrl="~/Capture.PNG" />
+                    <div class="header-action">
+                        <asp:ImageButton CssClass="header-action-button" ID="btnSignin" CausesValidation="false" runat="server" Text="Sign in" Width="70" Height="30" ImageUrl="~/Capture1.PNG" />
+                        <asp:ImageButton CssClass="header-action-button" ID="btnSignup" CausesValidation="false" runat="server" Text="Sign Up" Width="70" Height="30" ImageUrl="~/Capture.PNG" />
                     </div>
+
                 </div>
             </div>
 
 
 
-            <div class="content_ page_div">
+            <div class="content">
                 <div class="content_loginpanel">
                     <div class="content_loginpanel1">
                         <span class="login-form-header">Sign in</span>
@@ -72,9 +65,19 @@
                         <br />
                         <br />
 
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="txtUsername"
+                            ErrorMessage="Please enter your username."
+                            Display="None" />
+                        <asp:RegularExpressionValidator runat="server" ControlToValidate="txtPassword"
+                            ErrorMessage="Please enter your password."
+                            Display="None" />
+
+
+
                         &nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btnLogin" runat="server" Text="Login" Width="70" Height="30" OnClick="btnLogin_Click" />
-
+                        <br />
+                        <asp:ValidationSummary CssClass="validate_login" ID="valLogin" runat="server" ForeColor="Red" DisplayMode="List" />
                     </div>
                 </div>
 
