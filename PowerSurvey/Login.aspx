@@ -12,8 +12,6 @@
 
 
         <div class="main">
-
-
             <div class="topbar" title="">
                 <div class="header-container">
 
@@ -67,9 +65,6 @@
 
                         <asp:RequiredFieldValidator runat="server" ControlToValidate="txtUsername"
                             ErrorMessage="Please enter your username."
-                            Display="None" />
-                        <asp:RegularExpressionValidator runat="server" ControlToValidate="txtPassword"
-                            ErrorMessage="Please enter your password."
                             Display="None" />
 
 

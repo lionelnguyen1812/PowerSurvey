@@ -13,6 +13,15 @@ public partial class Login : System.Web.UI.Page
     }
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-        Response.Redirect("http://google.com");
+        string userName = txtUsername.Text;
+        string password = txtPassword.Text;
+        UserBusiness ub = new UserBusiness();
+        if (ub.Auth(userName, password))
+        {
+            Response.Redirect("http://google.com");
+        }
+        else {
+            Response.Write(txtPassword.Text);
+        }
     }
 }
