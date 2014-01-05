@@ -23,7 +23,9 @@ public class DbConnector
     {
         SqlCommand myCommand = new SqlCommand();
         DataTable dataTable = new DataTable();
+        
         dataTable = null;
+        
         DataSet ds = new DataSet();
         try
         {
@@ -35,7 +37,6 @@ public class DbConnector
             //myCommand.ExecuteReader();
             _adapter.Fill(ds);
             dataTable = ds.Tables[0];
-            int c=dataTable.Rows.Count;
         }
         catch (SqlException e)
         {
@@ -49,6 +50,8 @@ public class DbConnector
         return dataTable;
     }
 
+    #region private helpers
+
     private SqlConnection openConnection()
     {
         if (_conn.State == ConnectionState.Closed || _conn.State == ConnectionState.Broken)
@@ -57,4 +60,7 @@ public class DbConnector
         }
         return _conn;
     }
+
+    #endregion
+
 }

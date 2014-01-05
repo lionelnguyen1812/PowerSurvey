@@ -18,7 +18,8 @@ public partial class Login : System.Web.UI.Page
         UserBusiness ub = new UserBusiness();
         if (ub.Auth(userName, password))
         {
-            Response.Redirect("http://google.com");
+            Controls.Clear();
+            Response.Write("SessionID: " + Request.Cookies["SessionID"].Value);
         }
         else {
             Response.Write(txtPassword.Text);

@@ -1,0 +1,8 @@
+sesionid
+
+logged
+	usrname
+	pwd
+
+usrHist
+	username
