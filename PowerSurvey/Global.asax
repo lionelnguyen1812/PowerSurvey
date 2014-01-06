@@ -42,7 +42,7 @@
         Application.Lock();
         try
         {
-            Application["SessionID"] = (int)Application["SessionID"] - 1;
+            Application["Session"] = (int)Application["SessionID"] - 1;
         }
         catch (Exception ex)
         {

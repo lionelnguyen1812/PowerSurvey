@@ -19,7 +19,7 @@ public partial class Login : System.Web.UI.Page
         if (ub.Auth(userName, password))
         {
             Controls.Clear();
-            Response.Write("SessionID: " + Request.Cookies["SessionID"].Value);
+
         }
         else {
             Response.Write(txtPassword.Text);
