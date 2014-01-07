@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CreateNewQuestion.aspx.cs" Inherits="CreateNewQuestion" %>
-<%@ Register TagPrefix="uc" TagName="MyControls" Src="~/MyTemplate.ascx" %>
+
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
     <link href="main.css" type="text/css" rel="stylesheet" />
 </head>
 <body>
-    
+
     <form id="form1" runat="server">
         <div>
             <div class="main">
@@ -28,8 +28,6 @@
                         </div>
 
                         <div class="header-action">
-                            <asp:ImageButton CssClass="header-action-button" ID="btnSignin" CausesValidation="false" runat="server" Text="Sign in" Width="70" Height="30" ImageUrl="~/Capture1.PNG" />
-                            <asp:ImageButton CssClass="header-action-button" ID="btnSignup" CausesValidation="false" runat="server" Text="Sign Up" Width="70" Height="30" ImageUrl="~/Capture.PNG" />
                         </div>
 
                     </div>
@@ -46,30 +44,49 @@
                         <div class="panel-main-content">
                             <asp:Label ID="Label1" runat="server" Text="Question:" CssClass="panel-label-title-of-textbox" />
                             <br />
-                            <asp:TextBox ID="txtQuestionContent" runat="server" CssClass="panel-input"  Width="97%" TextMode="MultiLine" Height="50px" />
+                            <asp:TextBox ID="txtQuestionContent" runat="server" CssClass="panel-input" Width="97%" TextMode="MultiLine" Height="50px" />
                             <br />
 
                             <div>
-                                <asp:Label runat="server" Text="Fail check"></asp:Label>
+                                <asp:ListView ID="lvAnswer" runat="server" ItemPlaceholderID="itemAnswer" DataSourceID="sqlGetContentAnswers">
+                                    <LayoutTemplate>
+                                        <table>
+                                            <tbody>
+                                                <asp:PlaceHolder ID="itemAnswer" runat="server"></asp:PlaceHolder>
+                                            </tbody>
+                                        </table>
+                                    </LayoutTemplate>
+                                    <ItemTemplate>
+                                        <tr>
+                                            <td>
+                                                <%# Eval("ChoiseContent") %>
+                                            </td>
+                                            <td>
+                                                <%# Eval("ChoiseIsRight") %>
+                                            </td>
+                                        </tr>
+                                    </ItemTemplate>
+                                </asp:ListView>
+                            </div>
+                            <asp:SqlDataSource ID="sqlGetContentAnswers" runat="server" ConnectionString="<%$ ConnectionStrings:panzunPowerSurver %>" SelectCommand="SELECT [ChoiseContent], [ChoiseIsRight] FROM [Choice]"></asp:SqlDataSource>
+
+                            <div>
+                                <asp:Label runat="server" Text="Fail Answer" ForeColor="red"></asp:Label>
                             </div>
 
                             <div>
-                                <asp:Label runat="server" Text="Right check"></asp:Label>
+                                <asp:Label runat="server" Text="True Answer" ForeColor="Green"></asp:Label>
                             </div>
 
                             <div class="panel-add-answer">
-                                
-                                <asp:CheckBox ID="cbxIsRight" runat="server" CssClass="panel-input-check" Text=" " />
-                                <asp:TextBox ID="tbxAnswer" runat="server" CssClass="panel-input"  Width="66%" Height="30px" />
-                                <asp:ImageButton ID="btnAddAnswer" runat="server" ImageUrl=""  />
+                                <asp:CheckBox ID="cbxIsRight" runat="server" CssClass="panel-input-check" />
+                                <input type="text" placeholder="Add Answer" id="tbxAnswer" class="panel-input" runat="server" />
+                                <asp:ImageButton ID="btnAddAnswer" runat="server" CssClass="panel-input-btn" ImageUrl="~/btn_add_1.png" OnClick="btnAddAnswer_Click" />
+
                             </div>
 
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <br />
-                            <asp:Button ID="btnSubmit" runat="server" Text="Login" Width="70" Height="30"/>
+
+                            <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="70" Height="30" />
                             <br />
                         </div>
                     </div>

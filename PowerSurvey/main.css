@@ -82,11 +82,6 @@
 }
 
 
-
-
-
-
-
 .button_button{
     border-radius:6px;
 }
@@ -143,7 +138,7 @@
 }
 
 .panel-add-answer{
-    Width="97%";
+    height:50px;
 }
 
 .login-form-header{
@@ -155,6 +150,21 @@
 
 }
 
+.panel-button-add-answer{
+    width:30px;
+    height:30px;
+}
+
+.panel-input-btn{
+    position:relative;
+    top:10px;
+    width:30px;
+    height:28px;
+    padding-top:2px;
+    margin-left:-35px;
+    border-left:1px solid #D5D5D5;
+}
+
 .panel-label-title-of-textbox{
     font-weight:bold;
     font-size:14px;
@@ -162,11 +172,20 @@
     line-height:40px;
 }
 
+.button-question-submit{
+    margin-left:22px;
+}
+
+
 .panel-input{
     border-radius:3px;
     border:1px solid #D5D5D5;
     padding-left:10px;
+    padding-top:0px;
     font-size:13px;
+
+    width:60%;
+    height:30px;
 }
 
 #txtPassword{

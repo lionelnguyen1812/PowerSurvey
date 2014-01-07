@@ -11,4 +11,8 @@ public partial class CreateNewQuestion : System.Web.UI.Page
     {
 
     }
+    protected void btnAddAnswer_Click(object sender, ImageClickEventArgs e)
+    {
+        
+    }
 }
