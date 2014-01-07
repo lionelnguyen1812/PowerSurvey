@@ -9,8 +9,16 @@
   
     
   
+<<<<<<< HEAD
     
   
+=======
+<<<<<<< HEAD
+    
+  
+=======
+>>>>>>> 02f591b951e6ef7ed9aa210b55874e8f8deda77e
+>>>>>>> d0bbbed8c3047efa5c1bdff4d2194115b56a9638
     <Service ID="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}"/>
   </StartupServices>
 </VisualWebDeveloper>
