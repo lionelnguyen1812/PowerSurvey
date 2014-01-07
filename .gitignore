@@ -7,7 +7,6 @@
 *.sln.docstates
 Web.config
 
-
 # Build results
 
 [Dd]ebug/
