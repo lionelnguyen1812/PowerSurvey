@@ -11,6 +11,8 @@ public class Answer
     public bool IsRight { get; set; }
     public string Content { get; set; }
 
+    public Answer() 
+    { }
 	public Answer(string Content, bool IsRight)
 	{
         this.IsRight = IsRight;

@@ -10,9 +10,7 @@ public class UserBusiness
 {
 	public UserBusiness()
 	{
-		//
-		// TODO: Add constructor logic here
-		//
+	
 	}
 
     public bool Auth(string userName, string password)

@@ -15,10 +15,13 @@ public partial class Login : System.Web.UI.Page
     {
         string userName = txtUsername.Text;
         string password = txtPassword.Text;
+
+        
         UserBusiness ub = new UserBusiness();
         if (ub.Auth(userName, password))
         {
-            Controls.Clear();
+            Application["Username"] = txtUsername.Text;
+            Response.Redirect("CreateNewQuestion.aspx");
 
         }
         else {

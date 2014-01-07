@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 
 /// <summary>
 /// Summary description for DbConnector
@@ -15,9 +16,11 @@ public class DbConnector
 	public DbConnector()
 	{
         _conn = new SqlConnection("Data Source=TIN\\SQLEXPRESS;Initial Catalog=SuperSurvey_Dev;User Id=sa;Password=123456");
+        //_conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["panzunPowerSurver"].ConnectionString);
 
         _adapter = new SqlDataAdapter();
 	}
+ 
 
     public DataTable ExecuteSelectQuery(string squery, SqlParameter[] parameters)
     {
@@ -32,9 +35,9 @@ public class DbConnector
             myCommand.Connection = openConnection();
             myCommand.CommandText = squery;
             myCommand.Parameters.AddRange(parameters);
-            // myCommand.ExecuteNonQuery();                
+                           
             _adapter.SelectCommand = myCommand;
-            //myCommand.ExecuteReader();
+            
             _adapter.Fill(ds);
             dataTable = ds.Tables[0];
         }
