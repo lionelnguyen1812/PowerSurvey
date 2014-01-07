@@ -17,6 +17,12 @@ public class SurveyBusiness
 
     public bool InsertQuestion(Question q)
     {
+<<<<<<< HEAD
         return new SurveyDataAccess().InsertQuestionData(q);
+=======
+
+
+        return false;
+>>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
     }
 }

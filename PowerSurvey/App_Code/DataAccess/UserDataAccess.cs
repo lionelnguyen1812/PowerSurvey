@@ -12,10 +12,17 @@ public class UserDataAccess
 {
     public UserDataAccess()
     {
+<<<<<<< HEAD
         
     }
 
 
+=======
+        //
+        // TODO: Add constructor logic here
+        //
+    }
+>>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
 
     public bool Login(string userName, string password)
     {
@@ -29,6 +36,10 @@ public class UserDataAccess
         parameters[1].Value = password;
 
         DataTable result = new DbConnector().ExecuteSelectQuery(squery, parameters);
+<<<<<<< HEAD
+=======
+        //DataTable result = newDbConnector().ExecuteProc("userlogin", parameters);
+>>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
 
         if (result.Rows.Count == 1)
         {

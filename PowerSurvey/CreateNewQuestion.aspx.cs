@@ -13,7 +13,10 @@ public partial class CreateNewQuestion : System.Web.UI.Page
     {
         lblUsername.Text = (string)Application["Username"];
         _lstAnswers = (List<Answer>)Session["Answers"];
+<<<<<<< HEAD
 
+=======
+>>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
         if (Session["Answers"] != null)
         {
             _lstAnswers = (List<Answer>)Session["Answers"];
@@ -41,8 +44,14 @@ public partial class CreateNewQuestion : System.Web.UI.Page
 
     private void ReloadSessionAnswer()
     {
+<<<<<<< HEAD
         
         Session["Answers"] = _lstAnswers;
+=======
+        Session["Answers"] = _lstAnswers;
+
+
+>>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
         Response.Redirect(Request.RawUrl);
     }
     protected void btnSubmit_Click(object sender, EventArgs e)

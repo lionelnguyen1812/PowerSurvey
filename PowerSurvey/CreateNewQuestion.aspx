@@ -27,9 +27,15 @@
                         </div>
 
                         <div class="header-action-question">
+<<<<<<< HEAD
                             <asp:Image CssClass="account-image" ID="Image1" runat="server" ImageUrl="~/account.png" />
                             <asp:Label ID="lblUsername" runat="server"></asp:Label>
 
+=======
+                            <asp:Image CssClass="account-image" ID="Image1" runat="server" ImageUrl="~/account.png"/>
+                            <asp:Label ID="lblUsername" runat="server" ></asp:Label>
+                            
+>>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
                         </div>
 
                     </div>
@@ -52,11 +58,14 @@
                                 CssClass="panel-input multi-line"
                                 Width="97%" Height="50px"
                                 TextMode="MultiLine" />
+<<<<<<< HEAD
 
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="txtQuestionContent"
                                 ErrorMessage="Please enter question content." ForeColor="Red" Display="None" />
 
 
+=======
+>>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
                             <br />
 
                             <div>
@@ -79,6 +88,10 @@
                                     </ItemTemplate>
                                 </asp:ListView>
                             </div>
+<<<<<<< HEAD
+=======
+                            <asp:SqlDataSource ID="sqlGetContentAnswers" runat="server" ConnectionString="<%$ ConnectionStrings:panzunPowerSurver %>" SelectCommand="SELECT [ChoiceID] [ChoiseContent], [ChoiseIsRight] FROM [Choice]"></asp:SqlDataSource>
+>>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
 
 
 
@@ -94,8 +107,12 @@
 
 
                             <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="70" Height="30" OnClick="btnSubmit_Click" />
+<<<<<<< HEAD
                             <asp:Button ID="btnReset" runat="server" Text="Reset" Width="70" Height="30"
                                 CausesValidation="false" OnClick="btnReset_Click" />
+=======
+                            <asp:Button ID="btnReset" runat="server" Text="Reset" Width="70" Height="30" OnClick="btnReset_Click" />
+>>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
                             <br />
                             
                             <asp:ValidationSummary ID="valError" runat="server" ForeColor="Red" DisplayMode="List" />

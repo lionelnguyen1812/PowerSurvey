@@ -15,8 +15,12 @@ public class DbConnector
     private SqlDataAdapter _adapter;
 	public DbConnector()
 	{
+<<<<<<< HEAD
         _conn = new SqlConnection("Data Source=TIN\\SQLEXPRESS;Initial Catalog=SuperSurvey_Dev;User Id=sa;Password=123456");
         //_conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["panzunPowerSurver"].ConnectionString);
+=======
+        _conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["panzunPowerSurver"].ConnectionString);
+>>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
 
         _adapter = new SqlDataAdapter();
 	}
