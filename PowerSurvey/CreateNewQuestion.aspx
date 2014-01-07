@@ -61,6 +61,7 @@
                                 
                                 <asp:CheckBox ID="cbxIsRight" runat="server" CssClass="panel-input-check" Text=" " />
                                 <asp:TextBox ID="tbxAnswer" runat="server" CssClass="panel-input"  Width="66%" Height="30px" />
+                                <asp:ImageButton ID="btnAddAnswer" runat="server" ImageUrl=""  />
                             </div>
 
                             <br />
@@ -68,7 +69,7 @@
                             <br />
                             <br />
                             <br />
-                            <asp:Button ID="btnLogin" runat="server" Text="Login" Width="70" Height="30"/>
+                            <asp:Button ID="btnSubmit" runat="server" Text="Login" Width="70" Height="30"/>
                             <br />
                         </div>
                     </div>
