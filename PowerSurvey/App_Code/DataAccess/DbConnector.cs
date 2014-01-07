@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
+using System.Web.Configuration;
 
 /// <summary>
 /// Summary description for DbConnector
@@ -14,7 +15,7 @@ public class DbConnector
     private SqlDataAdapter _adapter;
 	public DbConnector()
 	{
-        _conn = new SqlConnection("Data Source=TIN\\SQLEXPRESS;Initial Catalog=SuperSurvey_Dev;User Id=sa;Password=123456");
+        _conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["panzunPowerSurver"].ConnectionString);
 
         _adapter = new SqlDataAdapter();
 	}
