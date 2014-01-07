@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CreateNewQuestion.aspx.cs" Inherits="CreateNewQuestion" %>
-<%@ Register TagPrefix="uc" TagName="MyControls" Src="~/MyTemplate.ascx" %>
+<%@ Register Src="~/WebUserControl.ascx" TagPrefix="uc" TagName="WebUserControl" %>
 
 <!DOCTYPE html>
 
@@ -58,6 +58,7 @@
                             </div>
 
                             <div class="panel-add-answer">
+                                
                                 
                                 <asp:CheckBox ID="cbxIsRight" runat="server" CssClass="panel-input-check" Text=" " />
                                 <asp:TextBox ID="tbxAnswer" runat="server" CssClass="panel-input"  Width="66%" Height="30px" />

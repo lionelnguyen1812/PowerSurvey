@@ -1,4 +1,5 @@
-﻿<%@ ControlLanguage="C#" AutoEventWireup="true" CodeFile="MyTemplate.ascx.cs" Inherits="MyTemplate" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="MyTemplate.ascx.cs" Inherits="MyTemplate" %>
+
 
 <style type="text/css">
     .mycheckBig input {
@@ -13,11 +14,11 @@
 </style>
 
 
-<%--<asp:EntityTemplate runat="server">
+<asp:EntityTemplate runat="server">
     <ItemTemplate>
         <asp:CheckBox ID="CheckBoxSmall" runat="server"  Checked=‘<%# Convert.ToBoolean(Eval("active")) %>‘ AutoPostBack="False" CssClass="mycheckSmall"  />
     </ItemTemplate>
-</asp:EntityTemplate>--%>
+</asp:EntityTemplate>
 
 <asp:EntityTemplate runat="server">
     <ItemTemplate>

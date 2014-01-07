@@ -8,10 +8,12 @@ using System.Web;
 /// </summary>
 public class Answer
 {
-	public Answer()
+    public bool IsRight { get; set; }
+    public string Content { get; set; }
+
+	public Answer(string Content, bool IsRight)
 	{
-		//
-		// TODO: Add constructor logic here
-		//
+        this.IsRight = IsRight;
+        this.Content = Content;
 	}
 }
