@@ -38,28 +38,21 @@
 
             <div class="content">
                 <div class="content_loginpanel">
-                    <div class="content_loginpanel1">
+                    <div class="panel-titlebar">
                         <span class="login-form-header">Sign in</span>
                     </div>
 
-                    <div class="content_loginpanel2">
+                    <div class="panel-main-content">
+
+                        
+                        <asp:Label ID="Label1" runat="server" Text="Username or email" CssClass="panel-label-title-of-textbox" />
+                        <br />
+                        <asp:TextBox ID="txtUsername" runat="server" CssClass="panel-input" Width="360" Height="30" />
                         <br />
 
-                        &nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="Label1" runat="server" Text="Username or email" Font-Bold="true" Font-Size="13.5px" ForeColor="#333333" />
+                        <asp:Label ID="Label2" runat="server" Text="Password" CssClass="panel-label-title-of-textbox" />
                         <br />
-                        <br />
-                        &nbsp;&nbsp;&nbsp;
-                        <asp:TextBox ID="txtUsername" runat="server" Width="360" Height="30" />
-                        <br />
-                        <br />
-
-                        &nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="Label2" runat="server" Text="Password" Font-Bold="true" Font-Size="13.5px" ForeColor="#333333" />
-                        <br />
-                        <br />
-                        &nbsp;&nbsp;&nbsp;
-                        <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" Width="360" Height="30" />
+                        <asp:TextBox ID="txtPassword" runat="server" CssClass="panel-input" TextMode="Password" Width="360" Height="30" />
                         <br />
                         <br />
 
@@ -69,7 +62,6 @@
 
 
 
-                        &nbsp;&nbsp;&nbsp;
                         <asp:Button ID="btnLogin" runat="server" Text="Login" Width="70" Height="30" OnClick="btnLogin_Click" />
                         <br />
                         <asp:ValidationSummary CssClass="validate_login" ID="valLogin" runat="server" ForeColor="Red" DisplayMode="List" />
