@@ -1,13 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="CreateNewQuestion.aspx.cs" Inherits="CreateNewQuestion" %>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-<%@ Register Src="~/WebUserControl.ascx" TagPrefix="uc" TagName="WebUserControl" %>
->>>>>>> d0bbbed8c3047efa5c1bdff4d2194115b56a9638
-=======
-<%@ Register Src="~/WebUserControl.ascx" TagPrefix="uc" TagName="WebUserControl" %>
->>>>>>> d0bbbed8c3047efa5c1bdff4d2194115b56a9638
 
 <!DOCTYPE html>
 
@@ -87,19 +78,10 @@
                             </div>
 
                             <div class="panel-add-answer">
-<<<<<<< HEAD
                                 <asp:CheckBox ID="cbxIsRight" runat="server" CssClass="panel-input-check" />
                                 <input type="text" placeholder="Add Answer" id="tbxAnswer" class="panel-input" runat="server" />
                                 <asp:ImageButton ID="btnAddAnswer" runat="server" CssClass="panel-input-btn" ImageUrl="~/btn_add_1.png" OnClick="btnAddAnswer_Click" />
 
-=======
-                                
-                                
-                                
-                                <asp:CheckBox ID="cbxIsRight" runat="server" CssClass="panel-input-check" Text=" " />
-                                <asp:TextBox ID="tbxAnswer" runat="server" CssClass="panel-input"  Width="66%" Height="30px" />
-                                <asp:ImageButton ID="btnAddAnswer" runat="server" ImageUrl=""  />
->>>>>>> d0bbbed8c3047efa5c1bdff4d2194115b56a9638
                             </div>
 
 
