@@ -26,7 +26,10 @@
                             <asp:LinkButton ID="LinkButton8" runat="server" CssClass="header-topnav-element">Blog</asp:LinkButton>
                         </div>
 
-                        <div class="header-action">
+                        <div class="header-action-question">
+                            <asp:Image CssClass="account-image" ID="Image1" runat="server" ImageUrl="~/account.png"/>
+                            <asp:Label ID="lblUsername" runat="server" ></asp:Label>
+                            
                         </div>
 
                     </div>
@@ -36,18 +39,23 @@
 
                 <div class="content">
                     <div class="content_questionpanel">
-                        <div class="panel-titlebar">
-                            <span class="login-form-header">Create Question</span>
+                        <div class="panel-titlebar-question">
+                            <span class="question-form-header">Create Question</span>
                         </div>
 
-                        <div class="panel-main-content">
+                        <div class="panel-main-content-question">
                             <asp:Label ID="Label1" runat="server" Text="Question:" CssClass="panel-label-title-of-textbox" />
                             <br />
-                            <asp:TextBox ID="txtQuestionContent" runat="server" CssClass="panel-input" Width="97%" TextMode="MultiLine" Height="50px" />
+
+                            <asp:Label ID="lblQuestionContent" runat="server" Text="abc" Visible="false" />
+                            <asp:TextBox ID="txtQuestionContent" runat="server"
+                                CssClass="panel-input multi-line"
+                                Width="97%" Height="50px"
+                                TextMode="MultiLine" />
                             <br />
 
                             <div>
-                                <asp:ListView ID="lvAnswer" runat="server" ItemPlaceholderID="itemAnswer" DataSourceID="sqlGetContentAnswers">
+                                <asp:ListView ID="lvAnswer" runat="server" ItemPlaceholderID="itemAnswer">
                                     <LayoutTemplate>
                                         <table>
                                             <tbody>
@@ -58,24 +66,17 @@
                                     <ItemTemplate>
                                         <tr>
                                             <td>
-                                                <%# Eval("ChoiseContent") %>
-                                            </td>
-                                            <td>
-                                                <%# Eval("ChoiseIsRight") %>
+                                                <span class='<%# Eval("IsRight") %>'>
+                                                    <%# Eval("Content") %>
+                                                </span>
                                             </td>
                                         </tr>
                                     </ItemTemplate>
                                 </asp:ListView>
                             </div>
-                            <asp:SqlDataSource ID="sqlGetContentAnswers" runat="server" ConnectionString="<%$ ConnectionStrings:panzunPowerSurver %>" SelectCommand="SELECT [ChoiseContent], [ChoiseIsRight] FROM [Choice]"></asp:SqlDataSource>
+                            <asp:SqlDataSource ID="sqlGetContentAnswers" runat="server" ConnectionString="<%$ ConnectionStrings:panzunPowerSurver %>" SelectCommand="SELECT [ChoiceID] [ChoiseContent], [ChoiseIsRight] FROM [Choice]"></asp:SqlDataSource>
 
-                            <div>
-                                <asp:Label runat="server" Text="Fail Answer" ForeColor="red"></asp:Label>
-                            </div>
 
-                            <div>
-                                <asp:Label runat="server" Text="True Answer" ForeColor="Green"></asp:Label>
-                            </div>
 
                             <div class="panel-add-answer">
                                 <asp:CheckBox ID="cbxIsRight" runat="server" CssClass="panel-input-check" />
@@ -85,7 +86,8 @@
                             </div>
 
 
-                            <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="70" Height="30" />
+                            <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="70" Height="30" OnClick="btnSubmit_Click" />
+                            <asp:Button ID="btnReset" runat="server" Text="Reset" Width="70" Height="30" OnClick="btnReset_Click" />
                             <br />
                         </div>
                     </div>
