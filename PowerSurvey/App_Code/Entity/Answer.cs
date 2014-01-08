@@ -8,6 +8,7 @@ using System.Web;
 /// </summary>
 public class Answer
 {
+    public int ID { get; set; }
     public bool IsRight { get; set; }
     public string Content { get; set; }
 
@@ -18,4 +19,11 @@ public class Answer
         this.IsRight = IsRight;
         this.Content = Content;
 	}
+
+    public Answer(int ID, string content, bool isRight)
+    {
+        this.ID = ID;
+        this.IsRight = isRight;
+        this.Content = content;
+    }
 }

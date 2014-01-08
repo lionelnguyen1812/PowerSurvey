@@ -8,19 +8,18 @@ using System.Web;
 /// </summary>
 public class Question
 {
-    public int QuestionCreateBy { get; set; }
+    public int CreateBy { get; set; }
 
-    public string QuestionContent { get; set; }
+    public string Content { get; set; }
 
-	public Question()
-	{
-		
-	}
-
-    public Question(int QuestionCreateBy,string QuestionContent) 
+    public Question()
     {
-        this.QuestionCreateBy = QuestionCreateBy;
-        this.QuestionContent = QuestionContent;
+    }
+
+    public Question(int createBy, string content)
+    {
+        this.CreateBy = createBy;
+        this.Content = content;
     }
 
 }

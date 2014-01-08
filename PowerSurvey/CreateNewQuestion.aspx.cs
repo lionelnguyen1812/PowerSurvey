@@ -11,26 +11,33 @@ public partial class CreateNewQuestion : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        lblUsername.Text = (string)Application["Username"];
-        _lstAnswers = (List<Answer>)Session["Answers"];
-<<<<<<< HEAD
-
-=======
->>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
-        if (Session["Answers"] != null)
+        if (Session["Username"] == null)
         {
-            _lstAnswers = (List<Answer>)Session["Answers"];
+            Response.Redirect("Login.aspx");
         }
         else
         {
-            _lstAnswers = new List<Answer>();
-        }
+            lblUsername.Text = Session["Username"].ToString();
+            txtQuestionContent.Text = Session["CurrQuestion"] != null ? Session["CurrQuestion"].ToString() : "";
+            _lstAnswers = (List<Answer>)Session["Answers"];
+            if (Session["Answers"] != null)
+            {
+                _lstAnswers = (List<Answer>)Session["Answers"];
+            }
+            else
+            {
+                _lstAnswers = new List<Answer>();
+            }
 
-        lvAnswer.DataSource = _lstAnswers;
-        lvAnswer.DataBind();
+            lvAnswer.DataSource = _lstAnswers;
+            lvAnswer.DataBind();
+        }
     }
+
     protected void btnAddAnswer_Click(object sender, ImageClickEventArgs e)
     {
+        Session["CurrQuestion"] = txtQuestionContent.Text;
+
         String content = null;
         bool isRight = false;
 
@@ -39,21 +46,15 @@ public partial class CreateNewQuestion : System.Web.UI.Page
 
         _lstAnswers.Add(new Answer(content, isRight));
 
-        ReloadSessionAnswer();
+        Reload();
     }
 
-    private void ReloadSessionAnswer()
+    private void Reload()
     {
-<<<<<<< HEAD
-        
         Session["Answers"] = _lstAnswers;
-=======
-        Session["Answers"] = _lstAnswers;
-
-
->>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
         Response.Redirect(Request.RawUrl);
     }
+
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
         Controls.Clear();
@@ -62,10 +63,12 @@ public partial class CreateNewQuestion : System.Web.UI.Page
             Response.Write(a.IsRight + ": " + a.Content + "<br/>");
         }
     }
+
     protected void btnReset_Click(object sender, EventArgs e)
     {
         _lstAnswers.Clear();
-        ReloadSessionAnswer();
+        Reload();
         
     }
+
 }

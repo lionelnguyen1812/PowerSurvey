@@ -27,15 +27,8 @@
                         </div>
 
                         <div class="header-action-question">
-<<<<<<< HEAD
-                            <asp:Image CssClass="account-image" ID="Image1" runat="server" ImageUrl="~/account.png" />
+                            <asp:Image CssClass="account-image" ID="Image1" runat="server" ImageUrl="~/images/account.png" />
                             <asp:Label ID="lblUsername" runat="server"></asp:Label>
-
-=======
-                            <asp:Image CssClass="account-image" ID="Image1" runat="server" ImageUrl="~/account.png"/>
-                            <asp:Label ID="lblUsername" runat="server" ></asp:Label>
-                            
->>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
                         </div>
 
                     </div>
@@ -53,19 +46,18 @@
                             <asp:Label ID="Label1" runat="server" Text="Question:" CssClass="panel-label-title-of-textbox" />
                             <br />
 
-                            <asp:Label ID="lblQuestionContent" runat="server" Text="abc" Visible="false" />
+                            <asp:Label ID="lblQuestionContent" runat="server" 
+                                Text="[Question Label]" 
+                                Visible="false" />
+
                             <asp:TextBox ID="txtQuestionContent" runat="server"
                                 CssClass="panel-input multi-line"
                                 Width="97%" Height="50px"
-                                TextMode="MultiLine" />
-<<<<<<< HEAD
+                                TextMode="MultiLine"/>
 
+                            <br />
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="txtQuestionContent"
                                 ErrorMessage="Please enter question content." ForeColor="Red" Display="None" />
-
-
-=======
->>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
                             <br />
 
                             <div>
@@ -88,18 +80,12 @@
                                     </ItemTemplate>
                                 </asp:ListView>
                             </div>
-<<<<<<< HEAD
-=======
-                            <asp:SqlDataSource ID="sqlGetContentAnswers" runat="server" ConnectionString="<%$ ConnectionStrings:panzunPowerSurver %>" SelectCommand="SELECT [ChoiceID] [ChoiseContent], [ChoiseIsRight] FROM [Choice]"></asp:SqlDataSource>
->>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
-
-
 
                             <div class="panel-add-answer">
                                 <asp:CheckBox ID="cbxIsRight" runat="server" CssClass="panel-input-check" />
                                 <input type="text" placeholder="Add Answer" id="tbxAnswer" class="panel-input" runat="server" />
                                 <asp:ImageButton ID="btnAddAnswer" runat="server" CssClass="panel-input-btn"
-                                    ImageUrl="~/btn_add_1.png" OnClick="btnAddAnswer_Click" />
+                                    ImageUrl="~/images/btn_add_1.png" OnClick="btnAddAnswer_Click" />
                                 <asp:RequiredFieldValidator runat="server" ControlToValidate="tbxAnswer"
                                     ErrorMessage="Please enter answer." ForeColor="red" Display="none" />
 
@@ -107,14 +93,10 @@
 
 
                             <asp:Button ID="btnSubmit" runat="server" Text="Submit" Width="70" Height="30" OnClick="btnSubmit_Click" />
-<<<<<<< HEAD
-                            <asp:Button ID="btnReset" runat="server" Text="Reset" Width="70" Height="30"
-                                CausesValidation="false" OnClick="btnReset_Click" />
-=======
+
                             <asp:Button ID="btnReset" runat="server" Text="Reset" Width="70" Height="30" OnClick="btnReset_Click" />
->>>>>>> f432d43334083ed6cf90da9be80e98cc006287c6
                             <br />
-                            
+
                             <asp:ValidationSummary ID="valError" runat="server" ForeColor="Red" DisplayMode="List" />
 
                         </div>

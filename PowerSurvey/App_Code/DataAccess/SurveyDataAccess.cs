@@ -21,10 +21,10 @@ public class SurveyDataAccess
         string squery = "insert into [Question] values (@createby,@content)";
         SqlParameter[] parameter=new SqlParameter[2];
         parameter[0] = new SqlParameter("@createby",SqlDbType.Int);
-        parameter[0].Value = q.QuestionCreateBy;
+        parameter[0].Value = q.CreateBy;
 
         parameter[1] = new SqlParameter("@content",SqlDbType.VarChar,200);
-        parameter[1].Value = q.QuestionContent;
+        parameter[1].Value = q.Content;
 
         dt = new DbConnector().ExecuteSelectQuery(squery,parameter);
 

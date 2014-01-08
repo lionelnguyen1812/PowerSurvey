@@ -20,7 +20,7 @@ public partial class Login : System.Web.UI.Page
         UserBusiness ub = new UserBusiness();
         if (ub.Auth(userName, password))
         {
-            Application["Username"] = txtUsername.Text;
+            Session["Username"] = txtUsername.Text;
             Response.Redirect("CreateNewQuestion.aspx");
 
         }

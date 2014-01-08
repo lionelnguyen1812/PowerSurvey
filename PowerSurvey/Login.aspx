@@ -10,11 +10,9 @@
 <body>
     <form id="frmLogin" runat="server">
 
-
         <div class="main">
             <div class="topbar" title="">
                 <div class="header-container">
-
                     <div class="header-logo">
                         <span class="header-logo-title">Survey</span>
                     </div>
